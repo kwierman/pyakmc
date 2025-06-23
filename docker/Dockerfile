@@ -1,5 +1,5 @@
 # Stage 1: Base image with dependencies installation
-FROM python:3.11-slim AS builder
+FROM python:3.13-slim AS builder
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ RUN poetry config virtualenvs.path .venv
 RUN poetry install --without dev --no-interaction
 
 # Stage 2: Runtime image
-FROM python:3.11-slim AS runtime
+FROM python:3.13-slim AS runtime
 
 WORKDIR /app
 
