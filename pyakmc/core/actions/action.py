@@ -1,9 +1,9 @@
 import logging
 
-from pyakmc.configuration import Configuration
+from pyakmc.core.configuration import Configuration
 
 
-class BaseAction:
+class Action:
     logger = logging.getLogger("pyakmc.core.actions.base")
     config: Configuration
 
