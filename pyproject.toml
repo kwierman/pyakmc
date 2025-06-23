@@ -1,6 +1,5 @@
 [project]
 name = "pyakmc"
-version = "0.1.0"
 description = "Python Monte Carlo Framework"
 authors = [
     {name = "kwierman",email = "kwierman@gmail.com"}
@@ -11,11 +10,16 @@ requires-python = ">=3.11,<4.0"
 dependencies = [
     "typer (>=0.16.0,<0.17.0)"
 ]
+dynamic = ["version"]
 
 [project.scripts]
 pyakmc = "pyakmc.cli:app"
 
 [tool.poetry]
+version = "0.0.0"
+
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
 
 [tool.poetry.group.dev.dependencies]
 isort = "^6.0.1"
@@ -33,9 +37,13 @@ black = "^25.1.0"
 darglint = "^1.8.1"
 bandit = "^1.8.5"
 
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
 
 
 [tool.coverage.run]
