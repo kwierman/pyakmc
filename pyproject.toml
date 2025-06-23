@@ -12,6 +12,9 @@ dependencies = [
     "typer (>=0.16.0,<0.17.0)"
 ]
 
+[project.scripts]
+pyakmc = "pyakmc.cli:app"
+
 [tool.poetry]
 
 [tool.poetry.group.dev.dependencies]
@@ -32,3 +35,31 @@ darglint = "^1.8.1"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.coverage.run]
+source = ["tests"]
+
+[coverage.paths]
+source = "pyakmc"
+
+[coverage.run]
+branch = true
+#omit = ["pyakmc/cli.py"]
+
+[tool.coverage.report]
+exclude_also = [
+    'def __repr__',
+    'if self.debug:',
+    'if settings.DEBUG',
+    'raise AssertionError',
+    'raise NotImplementedError',
+    'if 0:',
+    'if __name__ == .__main__.:',
+    'if TYPE_CHECKING:',
+    'class .*\bProtocol\):',
+    '@(abc\.)?abstractmethod',
+    "def synthesize",
+    "def cli",
+    "class Base",
+]
