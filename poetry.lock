@@ -194,6 +194,18 @@ coverage = "*"
 setuptools = "*"
 
 [[package]]
+name = "darglint"
+version = "1.8.1"
+description = "A utility for ensuring Google-style docstrings stay up to date with the source code."
+optional = false
+python-versions = ">=3.6,<4.0"
+groups = ["dev"]
+files = [
+    {file = "darglint-1.8.1-py3-none-any.whl", hash = "sha256:5ae11c259c17b0701618a20c3da343a3eb98b3bc4b5a83d31cdd94f5ebdced8d"},
+    {file = "darglint-1.8.1.tar.gz", hash = "sha256:080d5106df149b199822e7ee7deb9c012b49891538f14a11be681044f0bb20da"},
+]
+
+[[package]]
 name = "dill"
 version = "0.4.0"
 description = "serialize all of Python"
@@ -934,5 +946,5 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.11"
-content-hash = "844b993b7e39a0e27e586fd08141d66b2a0f69d1ab39f542d8bff8390f980f03"
+python-versions = ">=3.11,<4.0"
+content-hash = "aa4e7682e384965ac7599aac84b12ff4f2ecf3dfdaa9132724ffe825c149d9a7"

@@ -7,7 +7,7 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<4.0"
 dependencies = [
     "typer (>=0.16.0,<0.17.0)"
 ]
@@ -27,6 +27,7 @@ coverage-badge = "^1.1.2"
 pytest-html = "^4.1.1"
 pytest-cov = "^6.2.1"
 black = "^25.1.0"
+darglint = "^1.8.1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
