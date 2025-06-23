@@ -1,6 +1,7 @@
 import logging
 
-from ..ontology import Simulation
+from pyakmc.ontology import Simulation
+
 from .action import Action
 
 

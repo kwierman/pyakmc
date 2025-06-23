@@ -1,6 +1,7 @@
 import logging
 
-from ..ontology import Step
+from pyakmc.ontology import Step
+
 from .action import Action
 
 
